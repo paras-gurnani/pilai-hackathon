@@ -1,0 +1,13 @@
+body {
+    padding-top: 5rem;
+  }
+  .starter-template {
+    padding: 3rem 0rem;
+  }
+  .plus{
+      height:200px;
+      width:200px;
+      position: absolute;
+      left:40%;
+  }
+ 

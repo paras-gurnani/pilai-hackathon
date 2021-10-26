@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .header {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+        }
+    </style>
+    <link href="./Styles/questionstyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" style="background-color: #192965;">
+        <div class="container">
+            <h1 class="display-4" style="color:white">Questions</h1>
+            <p class="lead" style="color:white">Answers you shall seek</p>
+        </div>
+    </div>
+   
+
+    <div id="countdown">
+        <div id='tiles'></div>
+        <div class="labels">
+          <li>Days</li>
+          <li>Hours</li>
+          <li>Mins</li>
+          <li>Secs</li>
+          <script>
+             var target_date = new Date().setTime(1580808600000); // set the countdown date
+            var days, hours, minutes, seconds; // variables for time units
+
+            var countdown = document.getElementById("tiles"); // get tag element
+
+            getCountdown();
+
+            setInterval(function () {
+              getCountdown();
+            }, 1000);
+
+            function getCountdown() {
+
+              // find the amount of "seconds" between now and target
+              var current_date = new Date().getTime();
+              var seconds_left = (target_date - current_date) / 1000;
+
+              days = pad(parseInt(seconds_left / 86400));
+              seconds_left = seconds_left % 86400;
+
+              hours = pad(parseInt(seconds_left / 3600));
+              seconds_left = seconds_left % 3600;
+
+              minutes = pad(parseInt(seconds_left / 60));
+              seconds = pad(parseInt(seconds_left % 60));
+
+              // format countdown string + set tag value
+              countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes +
+                "</span><span>" + seconds + "</span>";
+            }
+
+            function pad(n) {
+              return (n < 10 ? '0' : '') + n;
+            }
+          </script>
+        </div>
+      </div>
+    <div class="card text-center" style="width: 500px;margin:0 auto 0 auto;border-radius: 30px;">
+        <div class="card-header" style="border-radius: 30px;background-color: #7fcd91;">
+            Question
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"><%=Qcode%></h5>
+            <form action="/Questions" method="post">
+                <table>
+                    <tbody style="padding-bottom:50px;">
+                        <tr>
+                            <td width="225px;"><input type="radio" name="answer1" value="a" autofocus><%=OptionA%></td>
+                            <td width="225px;"><input type="radio" name="answer2" value="b"><%=OptionB%></td>
+                        </tr>
+                        <tr>
+                            <td width="225px;"><input type="radio" name="answer3" value="c"><%=OptionC%></td>
+                            <td width="225px;"><input type="radio" name="answer4" value="d"><%=OptionD%></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button style="position:relative;top:15px;" class="btn btn-lg btn-success">Next</button>
+            </form>
+        </div>
+    </div>
+    <script src="Questions.js"></script>
+</body>
+
+</html>

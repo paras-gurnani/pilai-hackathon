@@ -1,0 +1,83 @@
+[
+    {
+        "qtitle": "1. C99 standard guarantees uniqueness of __________ characters for internal names.",
+        "a": 31,
+        "b": 63,
+        "c": 12,
+        "d": 14,
+        "ans":"a"
+    },
+    {
+        "qtitle": "Which of the following is not a valid variable name declaration?\n",
+        "a": "int __a3",
+        "b": "int__3a",
+        "c": "int__A3",
+        "d": "Noneofthementioned",
+        "ans":"b"
+    },
+    {
+        "qtitle": "Which of the following is not a valid variable name declaration?\n",
+
+        "a": "int _a3",
+        "b": "int a_3",
+        "c": "int 3_a",
+        "d": "int _3a",
+        "ans":"c"
+    },
+    {
+        "qtitle": "Which of the following is not a valid variable name declaration?\n",
+        "a": "int _a3",
+        "b": "int a_3",
+        "c": "int 3_a",
+        "d": "int _3a",
+        "ans":"d"
+    },
+    {
+        "qtitle": "What should be the size of ROM if it is used to store the table for multiplication of two 8 - bit unsigned integers?",
+        "a": "64k x 8",
+        "b": "64k x 16",
+        "c": "4k x 8",
+        "d": "64k x 16",
+        "ans":"a"
+    },
+    {
+        "qtitle": "Which of the following is / are the advantages of VLAN?\n",
+        "a": "It can increase the network security.",
+        "b": "It allows logical grouping of users by function",
+        "c": "All of the above",
+        "d": "None of the above",
+        "ans":"b"
+    },
+    {
+        "qtitle": "Which of the following switching technologies reduces the size of the broadcast domain?\n",
+        "a": "VLAN",
+        "b": "ISL",
+        "c": "STP",
+        "d": "ARP",
+        "ans":"c"
+    },
+    {
+        "qtitle": "Which of the following is / are the state of the links in CSS?\n",
+        "a": "hover",
+        "b": "active",
+        "c": "disabled",
+        "d": "All of the above",
+        "ans":"d"
+    },
+    {
+        "qtitle": "Which CSS property is used for controlling the layout?\n",
+        "a": "header",
+        "b": "display",
+        "c": "footer",
+        "d": "none of the above",
+        "ans":"b"
+    },
+    {
+        "qtitle": "Which CSS property sets the stack order of an element?\n",
+        "a": "z-index",
+        "b": "position",
+        "c": "overflow",
+        "d": "clip",
+        "ans":"c"
+    }
+]

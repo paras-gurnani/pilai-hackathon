@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registry Form</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+    <script src="https://npmcdn.com/js-alert/dist/jsalert.min.js"></script>
+
+    <style>
+        .drop {
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body  style="background-color: rgb(250,250,250); text-align: left;">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8 order-md-1">
+                <h4 style="margin-top: 20px;margin-bottom: 20px;">Fill Your Details</h4>
+                <hr color="black" width="1000px"\>
+                <form action='/Register' method="POST" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" style="margin-left: -20px;">First name</label>
+                            <input type="text" class="form-control" id="firstName" style="margin-left: -20px;" name="fname" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" style="margin-left: -20px;">Last name</label>
+                            <input type="text" class="form-control"  name="lname" style="margin-left: -20px;" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <br\>
+                        <div class="row">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control"  placeholder="Enter Password" name="pwd">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+
+                            <label for="cpassword">Confirm password</label>
+                            <input type="password" class="form-control"  placeholder="confirm password" name="cpwd">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+                        <br \>
+                        <div class="row">
+
+                            <label for="phoneNumber">Phone number</label>
+                            <input type="text" class="form-control" name="phoneNum" required>
+                            <div class="invalid-feedback">
+                                Please enter phone number
+                            </div>
+                        </div>
+                        <br \>
+                        <div class="row">
+                            <label for="qual">Current year of engineering</label>
+                            <div class="col-md-8 mb-3">
+                                <select name="qualification" class="drop">
+                                    <option value="1">First year engineering</option>
+                                    <option value="5">Second year engineering</option>
+                                    <option value="10">Third year engineering</option>
+                                    <option value="15">Fourth year engineering</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    
+                    <hr class="mb-4">
+                
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="form-validation.js"></script> 
+</body>
+
+</html>
